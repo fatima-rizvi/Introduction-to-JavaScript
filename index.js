@@ -93,9 +93,40 @@ console.log(dogFeeder(15,1));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-function rockPaperScissors (playersChoice) {
-    
+function rockPaperScissors (playerChoice) {
+    let computerResult = "undecided";
+    let computerChoice = Math.floor(Math.random() * (4 -1)+ 1);
+    if (computerChoice === 1) {
+        computerResult = "rock";
+        if (playerChoice === "paper") {
+            console.log("The computer selected rock, so the player wins!")
+        }else if (playerChoice === "scissors") {
+            console.log("The computer selected rock, so the player loses!")
+        }else if (playerChoice === "rock") {
+            console.log("Both player and computer selected rock, it's a tie!")
+        }
+    }else if (computerChoice === 2) {
+        computerResult = "paper";
+        if (playerChoice === "paper") {
+            console.log("Both player and computer selected paper, it's a tie!")
+        }else if (playerChoice === "scissors") {
+            console.log("The computer selected paper, so the player wins!")
+        }else if (playerChoice === "rock") {
+            console.log("The computer selected paper, so the player loses!")
+        }
+    }else if (computerChoice === 3) {
+        computerResult = "scissors";
+        if (playerChoice === "paper") {
+            console.log("The computer selected scissors, so the player loses!")
+        }else if (playerChoice === "scissors") {
+            console.log("Both player and computer selected scissors, it's a tie!")
+        }else if (playerChoice === "rock") {
+            console.log("The computer selected scissors, so the player wins!")
+        }
+    }
 }
+
+console.log(rockPaperScissors("paper"));
   
 
 /************************************************************** Task 5 **************************************************************/
