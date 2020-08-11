@@ -133,13 +133,15 @@ console.log(rockPaperScissors("paper"));
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+const kmToMilesFunction = (km) => km * .621371;
+console.log(kmToMilesFunction(3));
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+const feetToCm = (feet) => feet * 30.38;
+console.log(feetToCm(3));
 
 
 
@@ -149,9 +151,17 @@ console.log(rockPaperScissors("paper"));
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 function annoyingSong (bottleNum) {
-
+    let bottlesLeft = bottleNum;
+    while (bottlesLeft > 0) {
+        bottlesLeft = bottlesLeft - 1;
+        bottlesLeftWord = bottlesLeft.toString();
+        bottleNumWord = bottleNum.toString();
+        console.log(bottleNumWord," bottles of soda on the wall, ",bottleNumWord," bottles of soda, take one down pass it around ",bottlesLeftWord," bottles of soda on the wall!");
+        bottleNum = bottlesLeft;
+    }
 }
 
+console.log(annoyingSong(5));
 
 
 /************************************************************** Task 7 **************************************************************/
