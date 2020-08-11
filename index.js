@@ -173,7 +173,23 @@ console.log(annoyingSong(5));
 //60s should be D 
 //and anything below 60 should be F
   
+function gradeCalculator (grade) {
+    let letterGrade = "unknown";
+    if (grade >= 90) {
+        letterGrade = "A";
+    }else if (grade >= 80) {
+        letterGrade = "B";
+    }else if (grade >= 70) {
+        letterGrade = "C";
+    }else if (grade >= 60) {
+        letterGrade = "D";
+    }else if (grade <60) {
+        letterGrade = "F";
+    }
+    return letterGrade;
+}
 
+console.log("Your letter grade is",(gradeCalculator(89.75)));
   
   
 
@@ -183,7 +199,19 @@ console.log(annoyingSong(5));
 // try looking up the .includes() method
 
 
-
+function vowelCounter (string) {
+    const vowel = ["a", "e", "i", "o", "u"]
+    let lowerCaseString = string.toLowerCase();
+    let lowerCaseArray = lowerCaseString.split("");
+    let vowelCount = 0;
+    for (let x = 0; x < lowerCaseArray.length; ++x) {
+        if (lowerCaseArray.includes(vowel)) {
+            vowelCount = vowelCount + 1;
+        }
+    }
+    return vowelCount;
+}
+console.log("Number of vowels is",(vowelCounter("Hey")))
 
 
 /************************************************************** Stretch **************************************************************/
