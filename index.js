@@ -218,7 +218,40 @@ console.log("Number of vowels is",(vowelCounter("Hey")))
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
+let playerChoice = prompt("Pick one: rock, paper, or scissors.")
 
+function newRockPaperScissors (playerChoice) {
+    let lowerPlayerChoice = playerChoice.toLowerCase();
+    let computerResult = "undecided";
+    let computerChoice = Math.floor(Math.random() * (4 -1)+ 1);
+    if (computerChoice === 1) {
+        computerResult = "rock";
+        if (lowerPlayerChoice === "paper") {
+            console.log("The computer selected rock, so the player wins!")
+        }else if (lowerPlayerChoice === "scissors") {
+            console.log("The computer selected rock, so the player loses!")
+        }else if (lowerPlayerChoice === "rock") {
+            console.log("Both player and computer selected rock, it's a tie!")
+        }
+    }else if (computerChoice === 2) {
+        computerResult = "paper";
+        if (lowerPlayerChoice === "paper") {
+            console.log("Both player and computer selected paper, it's a tie!")
+        }else if (lowerPlayerChoice === "scissors") {
+            console.log("The computer selected paper, so the player wins!")
+        }else if (lowerPlayerChoice === "rock") {
+            console.log("The computer selected paper, so the player loses!")
+        }
+    }else if (computerChoice === 3) {
+        computerResult = "scissors";
+        if (lowerPlayerChoice === "paper") {
+            console.log("The computer selected scissors, so the player loses!")
+        }else if (lowerPlayerChoice === "scissors") {
+            console.log("Both player and computer selected scissors, it's a tie!")
+        }else if (lowerPlayerChoice === "rock") {
+            console.log("The computer selected scissors, so the player wins!")
+        }
+    }
+}
 
-
-
+console.log(newRockPaperScissors(playerChoice));
