@@ -40,7 +40,7 @@ function dogAge (humanAge) {
     return dogYears
 }
 
-console.log("Age in dog years" + dogAge(19));
+console.log("Age in dog years " + dogAge(19));
 
 
 
